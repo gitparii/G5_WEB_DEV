@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="adminStyle.css">
+  <title>Blog Manager</title>
+</head>
+<body>
+  <div id="topbar"></div>
+
+  <main class="form-container">
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Search blog by title..." />
+    </section>
+
+    <section id="searchResults"></section>
+
+    <section class="form-box">
+      <h1>Create or Edit Blog</h1>
+      <form id="blogManagerForm">
+        <label>Title</label>
+        <input type="text" id="blogTitle" required />
+
+        <label>Image URL</label>
+        <input type="url" id="blogImage" required />
+
+        <label>Description</label>
+        <textarea id="blogContent" rows="4" required></textarea>
+
+        <label>Author</label>
+        <input type="text" id="blogAuthor" required />
+
+        <label>Category</label>
+        <select id="blogCategory" required>
+          <option value="">Select category</option>
+          <option value="Nature">Nature</option>
+          <option value="Tech">Tech</option>
+          <option value="Culture">Culture</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <input type="hidden" id="editId" value="-1" />
+        <button type="submit">Publish</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="blogManager.js"></script>
+</body>
+</html>
